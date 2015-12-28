@@ -1,0 +1,38 @@
+description = "Default layout"
+
+[staticMenu mainMenu]
+code = "main-menu"
+==
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="{{ [
+            'assets/css/app.css'
+        ]|theme }}" rel="stylesheet">
+
+        {% styles %}
+
+        {% placeholder head %}
+
+        <title>{{ this.page.title }}</title>
+    </head>
+
+    <body>
+        {% component 'mainMenu' %}
+
+        {% page %}
+
+        <script src="{{ [
+            '@jquery',
+            '@framework',
+            '@framework.extras',
+            'assets/js/app.js'
+        ]|theme }}"></script>
+
+        {% scripts %}
+    </body>
+</html>
