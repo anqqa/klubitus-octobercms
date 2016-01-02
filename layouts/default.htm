@@ -17,11 +17,13 @@ code = "main-menu"
         {% styles %}
 
         {% placeholder head %}
+
+        <title>{{ this.page.title }}</title>
     </head>
 
     <body>
         {% component 'mainMenu' %}
-        
+
         {% page %}
 
         <script src="{{ [

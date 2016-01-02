@@ -1,0 +1,30 @@
+title = "Week Calendar"
+url = "/events/:year|^[0-9]+$/week/:week|^[0-5]?[0-9]$"
+layout = "default"
+description = "Weekly event calendar."
+is_hidden = 0
+
+[calendarEvents]
+eventPage = "calendar/home"
+datePeriod = "week"
+day = "{{ :day }}"
+week = "{{ :week }}"
+month = "{{ :month }}"
+year = "{{ :year }}"
+==
+<?php
+use Carbon\Carbon;
+
+function onStart() {
+    $year = $this->param('year');
+    $week = $this->param('week');
+    
+    $this['date']         = Carbon::create($year)->addWeeks($week - 1);
+    $this['previousWeek'] = $this['date']->copy()->subWeek();
+    $this['nextWeek']     = $this['date']->copy()->addWeek();
+}
+?>
+==
+{% partial 'calendarEvents::paginationWeekly' previousWeek=previousWeek nextWeek=nextWeek %}
+
+{% component 'calendarEvents' %}
