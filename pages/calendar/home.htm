@@ -5,23 +5,14 @@ description = "Upcoming events."
 is_hidden = 0
 
 [calendarEvents]
-eventPage = "calendar/home"
+eventPage = "calendar/event"
+paginationPage = "calendar/week"
 datePeriod = 1
 day = "{{ :day }}"
 week = "{{ :week }}"
 month = "{{ :month }}"
 year = "{{ :year }}"
 ==
-<?php
-use Carbon\Carbon;
-
-function onStart() {
-    $this['date']         = Carbon::create();
-    $this['previousWeek'] = $this['date']->copy()->subWeek();
-    $this['nextWeek']     = $this['date']->copy()->addWeek();
-}
-?>
-==
-{% partial 'calendarEvents::paginationWeekly' previousWeek=previousWeek nextWeek=nextWeek %}
+{% partial 'calendarEvents::pagination' pagination=pagination %}
 
 {% component 'calendarEvents' %}
