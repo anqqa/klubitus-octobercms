@@ -1,6 +1,6 @@
 description = "Default layout"
 
-[staticMenu mainMenu]
+[staticMenu mainmenu]
 code = "main-menu"
 ==
 <!doctype html>
@@ -22,9 +22,33 @@ code = "main-menu"
     </head>
 
     <body>
-        {% component 'mainMenu' %}
 
-        {% page %}
+        <nav id="mainmenu">
+            {% component 'mainmenu' %}
+        </nav><!-- #mainmenu -->
+
+        <nav id="submenu">
+            {% placeholder submenu default %}
+            {% endplaceholder %}
+        </nav><!-- #submenu -->
+
+        {% if placeholder('sidebar') %}
+
+            <div id="content content--sidebar">
+                {% page %}
+            </div><!-- #content -->
+
+            <div id="sidebar">
+                {% placeholder sidebar %}
+            </div><!-- #sidebar -->
+
+        {% else %}
+
+            <div id="content">
+                {% page %}
+            </div><!-- #content -->
+
+        {% endif %}
 
         <script src="{{ [
             '@jquery',
