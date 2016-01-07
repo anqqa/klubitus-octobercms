@@ -3,13 +3,26 @@
 
 #submenu {
   background: $submenu-color;
-
   padding: $padding;
 
   .brand {
-    height: $topbar - $padding;
-
     border-bottom: 1px solid $base-border-color;
+    color: $base-link-color;
+    font-weight: $font-weight-bold;
+    height: $topbar - $padding;
+    line-height: 1em;
+
+    small {
+      color: $base-font-color;
+    }
+  }
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      color: $base-link-color;
+    }
   }
 }
 

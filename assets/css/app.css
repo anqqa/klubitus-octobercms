@@ -414,7 +414,11 @@ nav ul li {
 #mainmenu {
   background: #111111; }
   #mainmenu .brand {
-    height: 50px; }
+    height: 50px;
+    text-align: center; }
+    #mainmenu .brand img {
+      height: 35px;
+      width: 35px; }
   #mainmenu ul li a {
     color: #999999;
     display: block;
@@ -423,7 +427,7 @@ nav ul li {
     text-decoration: none;
     width: 100%; }
     #mainmenu ul li a:before {
-      font-family: FontAwesome;
+      font-family: 'FontAwesome';
       font-size: 24px;
       line-height: 36px;
       display: block; }
@@ -452,8 +456,17 @@ nav ul li {
   background: #222222;
   padding: 15px; }
   #submenu .brand {
+    border-bottom: 1px solid #555555;
+    color: #ffffff;
+    font-weight: 700;
     height: 35px;
-    border-bottom: 1px solid #555555; }
+    line-height: 1em; }
+    #submenu .brand small {
+      color: #999999; }
+  #submenu a {
+    color: #999999; }
+    #submenu a:hover {
+      color: #ffffff; }
 
 @media only screen and (min-width: 768px) {
   #submenu {
@@ -480,3 +493,10 @@ nav ul li {
 
 #sidebar {
   padding: 15px; }
+
+.events .event {
+  border-top: 1px solid rgba(85, 85, 85, 0.5);
+  margin: 5px 0; }
+
+.events .event:first-child {
+  border-top: none; }

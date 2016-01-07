@@ -28,12 +28,19 @@ security = "all"
     <body>
 
         <nav id="mainmenu">
-            <div class="brand"></div>
+            <div class="brand">
+                <a href="{{  'home'|page }}">
+                    <img src="{{ 'assets/img/logo.svg'|theme }}" alt="Logo" title="klubitus">
+                </a>
+            </div>
             {% component 'mainmenu' %}
         </nav><!-- #mainmenu -->
 
         <nav id="submenu">
-            <div class="brand">klubitus</div>
+            <div class="brand">
+                klubitus<br>
+                <small>Est. 2000</small>
+            </div>
             {% placeholder submenu default %}
             {% endplaceholder %}
         </nav><!-- #submenu -->

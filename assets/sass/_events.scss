@@ -1,0 +1,36 @@
+// MOBILE
+// ------------------------------------
+
+.events {
+  .event {
+    border-top: 1px solid $secondary-border-color;
+    margin: 5px 0;
+  }
+  .event:first-child {
+    border-top: none;
+  }
+}
+
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

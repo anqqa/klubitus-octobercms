@@ -22,9 +22,10 @@ $serif: 'Radley', serif;
 // Default colors
 // ------------------------------------
 
-$body-color:        #000000;
-$base-border-color: #555555 !default;
-$base-font-color:   #999999 !default;
-$base-link-color:   #ffffff;
-$mainmenu-color:    #111111;
-$submenu-color:     #222222;
+$body-color:             #000000;
+$base-border-color:      #555555 !default;
+$secondary-border-color: transparentize($base-border-color, 0.5);
+$base-font-color:        #999999 !default;
+$base-link-color:        #ffffff;
+$mainmenu-color:         #111111;
+$submenu-color:          #222222;
