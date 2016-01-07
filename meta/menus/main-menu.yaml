@@ -2,17 +2,13 @@ name: 'Main menu'
 items:
     -
         title: Home
-        nesting: ''
         type: cms-page
-        url: ''
-        code: ''
+        code: home
         reference: home
-        cmsPage: ''
-        replace: ''
         viewBag:
-            isExternal: '0'
             isHidden: '0'
-            cssClass: ''
+            cssClass: menu-home
+            isExternal: '0'
     -
         title: Events
         type: cms-page
@@ -20,5 +16,5 @@ items:
         reference: calendar/home
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: menu-events
             isExternal: '0'

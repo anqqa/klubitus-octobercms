@@ -1,1 +1,30 @@
+// Element sizes
+// ------------------------------------
 
+$mainmenu: 70px;
+$submenu:  230px;
+$sidebar:  300px;
+$topbar:   50px;
+
+$padding: 15px;
+
+// Typography
+@import url(https://fonts.googleapis.com/css?family=Radley:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+$base-font-size: 13px !default;
+$base-line-height: 1.5em !default;
+$base-spacing: 1.5em !default;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+$sans-serif: 'Noto Sans', sans-serif;
+$serif: 'Radley', serif;
+
+// Default colors
+// ------------------------------------
+
+$body-color:        #000000;
+$base-border-color: #555555 !default;
+$base-font-color:   #999999 !default;
+$base-link-color:   #ffffff;
+$mainmenu-color:    #111111;
+$submenu-color:     #222222;

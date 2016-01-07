@@ -1,0 +1,45 @@
+// MOBILE
+// ------------------------------------
+
+#submenu {
+  background: $submenu-color;
+
+  padding: $padding;
+
+  .brand {
+    height: $topbar - $padding;
+
+    border-bottom: 1px solid $base-border-color;
+  }
+}
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+  #submenu {
+    @include position(fixed, 0 null null $mainmenu);
+    width: $submenu;
+    height: 100%;
+
+    border-right: 1px solid $base-border-color;
+  }
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

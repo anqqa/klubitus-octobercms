@@ -1,0 +1,78 @@
+// MOBILE
+// ------------------------------------
+
+body, html {
+  background: $body-color;
+
+  color: $base-font-color;
+  font-family: $sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 1.9em;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  font-family: $serif;
+  font-size: 1.3em;
+  font-weight: $font-weight-normal;
+  line-height: 1.25em;
+
+  margin-bottom: 0.9em;
+}
+
+h3 {
+  font-family: $serif;
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: $font-weight-normal;
+  line-height: 1.3em;
+
+  margin-bottom: 0.4em;
+}
+
+.meta {
+  color: transparentize($base-font-color, 0.6);
+  font-family: $serif;
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

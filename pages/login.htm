@@ -1,0 +1,20 @@
+title = "Login"
+url = "/login"
+layout = "default"
+description = "Login screen."
+is_hidden = 0
+
+[account]
+paramCode = "code"
+==
+<?php
+use Klubitus\User\Classes\KohanaAuth;
+
+public function onSignin() {
+    KohanaAuth::migrate(post('login'), post('password'));
+
+    return $this->account->onSignIn();
+}
+?>
+==
+{% component 'account' %}

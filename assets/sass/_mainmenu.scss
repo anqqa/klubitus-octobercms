@@ -1,0 +1,74 @@
+// MOBILE
+// ------------------------------------
+
+#mainmenu {
+  background: $mainmenu-color;
+
+  .brand {
+    height: $topbar;
+  }
+
+  ul li a {
+    color: $base-font-color;
+    display: block;
+    padding-bottom: $base-spacing;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    &:before {
+      font-family: FontAwesome;
+      font-size: 24px;
+      line-height: 36px;
+      display: block;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+  }
+
+  ul li.active a {
+    color: $base-link-color;
+  }
+
+  .menu-home a:before { content: "\f015"; }
+  .menu-events a:before { content: "\f073"; }
+}
+
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+  #mainmenu {
+    @include position(fixed, 0 null 0 0);
+    width: $mainmenu;
+
+    padding-top: $padding;
+
+    border-right: 1px solid $base-border-color;
+
+    ul {
+      text-align: center;
+    }
+  }
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

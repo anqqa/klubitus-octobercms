@@ -1,0 +1,34 @@
+// MOBILE
+// ------------------------------------
+
+#topbar {
+  border-bottom: 1px solid $base-border-color;
+}
+
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+  #topbar {
+    height: $topbar - $padding;
+  }
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

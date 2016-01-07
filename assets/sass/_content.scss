@@ -1,0 +1,33 @@
+// MOBILE
+// ------------------------------------
+
+#content {
+  padding: $padding;
+}
+
+// 480 PX
+// ------------------------------------
+
+@media only screen and (min-width: 480px) {
+
+}
+
+
+// 768 PX
+// ------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+  #content {
+    margin-left: $mainmenu + $submenu;
+  }
+
+}
+
+
+// 1024 PX
+// ------------------------------------
+
+@media only screen and (min-width: 1024px) {
+
+}

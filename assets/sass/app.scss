@@ -1,17 +1,27 @@
+@charset "UTF-8";
+
+// Vendor
+// ------------------------------------
+
+@import "vendor/normalize/normalize";
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat-helpers";
 @import "config";
+@import "vendor/neat/neat";
 
-// Import core Sass libraries
-// ------------------------------------
-@import "lib/bourbon/bourbon";
-@import "lib/neat/neat";
 
-// CSS reset
+// Local
 // ------------------------------------
-@import "_reset.scss";
-@import "_mixins.scss";
 
-// Base
-// ------------------------------------
-@import "typography";
+@import "mixins";
+
+@import "global";
+@import "navigation";
 @import "forms";
 @import "buttons";
+
+@import "mainmenu";
+@import "submenu";
+@import "topbar";
+@import "content";
+@import "sidebar";

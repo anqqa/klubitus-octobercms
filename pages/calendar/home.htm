@@ -7,12 +7,18 @@ is_hidden = 0
 [calendarEvents]
 eventPage = "calendar/event"
 paginationPage = "calendar/week"
-datePeriod = 1
+datePeriod = "week"
 day = "{{ :day }}"
 week = "{{ :week }}"
 month = "{{ :month }}"
 year = "{{ :year }}"
 ==
+<h1>
+    {{ title }}
+</h1>
+
 {% partial 'calendarEvents::pagination' pagination=pagination %}
 
 {% component 'calendarEvents' %}
+
+{% partial 'calendarEvents::pagination' pagination=pagination %}
