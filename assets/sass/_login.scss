@@ -1,20 +1,8 @@
 // MOBILE
 // ------------------------------------
 
-.events {
-  .event {
-    border-top: 1px solid $secondary-border-color;
-    margin: 5px 0;
-  }
-  .event:first-child {
-    border-top: none;
-  }
-}
-
-.events--list {
-  .date {
-    float: right;
-  }
+#login {
+  width: 280px;
 }
 
 

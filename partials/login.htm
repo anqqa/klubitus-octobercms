@@ -1,0 +1,35 @@
+<section id="login">
+    <a class="button button--primary button--full">
+        <i class="fa fa-facebook"></i>
+        Login with Facebook
+    </a>
+
+    <span class="separator">or</span>
+
+    <form data-request="onSignin">
+        <div class="input">
+            <i class="input__addon fa fa-envelope-o"></i>
+            <input
+                name="login"
+                type="text"
+                class="input__field"
+                id="loginLogin"
+                placeholder="Email or username" />
+        </div>
+
+        <div class="input">
+            <i class="input__addon fa fa-lock"></i>
+            <input
+                name="password"
+                type="password"
+                class="input__field"
+                id="loginPassword"
+                placeholder="Password" />
+        </div>
+
+        <button type="submit" class="button button--full">Login</button>
+    </form>
+    <br>
+    <a class="link--secondary right" href="{{ 'register'|page }}">Register</a>
+    <a class="link--secondary" href="{{ 'password'|page }}">Forgot password</a>
+</section>

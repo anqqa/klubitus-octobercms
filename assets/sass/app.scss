@@ -3,7 +3,6 @@
 // Vendor
 // ------------------------------------
 
-@import "vendor/normalize/normalize";
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat-helpers";
 @import "config";
@@ -26,4 +25,5 @@
 @import "content";
 @import "sidebar";
 
+@import "login";
 @import "events";

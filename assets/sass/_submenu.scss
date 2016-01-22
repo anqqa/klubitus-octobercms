@@ -17,6 +17,11 @@
     }
   }
 
+  section {
+    border-top: 1px solid $secondary-border-color;
+    margin: 5px 0;
+  }
+
   a {
     color: $base-font-color;
 
@@ -24,6 +29,16 @@
       color: $base-link-color;
     }
   }
+
+  h2 {
+    color: $base-link-color;
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
 }
 
 // 480 PX
@@ -40,11 +55,13 @@
 @media only screen and (min-width: 768px) {
 
   #submenu {
-    @include position(fixed, 0 null null $mainmenu);
-    width: $submenu;
-    height: 100%;
+    @include flex(0 0 $submenu);
 
     border-right: 1px solid $base-border-color;
+
+    .wrapper {
+    }
+
   }
 
 }

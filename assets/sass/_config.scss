@@ -14,6 +14,7 @@ $padding: 15px;
 $base-font-size: 13px !default;
 $base-line-height: 1.5em !default;
 $base-spacing: 1.5em !default;
+$base-transition-length: 0.1s;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
 $sans-serif: 'Noto Sans', sans-serif;
@@ -22,10 +23,13 @@ $serif: 'Radley', serif;
 // Default colors
 // ------------------------------------
 
+$accent-color:           #ffffff;
 $body-color:             #000000;
 $base-border-color:      #555555 !default;
 $secondary-border-color: transparentize($base-border-color, 0.5);
 $base-font-color:        #999999 !default;
-$base-link-color:        #ffffff;
+$base-link-color:        #ffffff !default;
+$input-background-color: #1e1e1e;
+$input-text-color:       $base-font-color;
 $mainmenu-color:         #111111;
 $submenu-color:          #222222;

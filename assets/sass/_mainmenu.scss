@@ -8,9 +8,8 @@
     height: $topbar;
     text-align: center;
 
-    img {
-      @include size($topbar - $padding);
-    }
+    a { display: block; }
+    img { @include size($topbar - $padding); }
   }
 
   ul li a {
@@ -28,14 +27,10 @@
       display: block;
     }
 
-    &:hover {
-      color: $base-link-color;
-    }
+    &:hover { color: $base-link-color; }
   }
 
-  ul li.active a {
-    color: $base-link-color;
-  }
+  ul li.active a { color: $base-link-color; }
 
   .menu-home a:before { content: "\f015"; }
   .menu-events a:before { content: "\f073"; }
@@ -56,10 +51,14 @@
 @media only screen and (min-width: 768px) {
 
   #mainmenu {
-    @include position(fixed, 0 null 0 0);
-    width: $mainmenu;
+    @include flex(0 0 $mainmenu);
 
-    padding-top: $padding;
+    .wrapper {
+      @include position(fixed, 0 null null 0);
+
+      padding-top: $padding;
+      width: $mainmenu;
+    }
 
     border-right: 1px solid $base-border-color;
 

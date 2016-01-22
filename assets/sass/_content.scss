@@ -2,7 +2,24 @@
 // ------------------------------------
 
 #content {
+  @include display(flex);
+  @include flex(1);
+  @include flex-direction(column);
+
   padding: $padding;
+}
+
+
+#page {
+  @include display(flex);
+  @include flex(1);
+
+  .center {
+    @include align-items(center);
+    @include display(flex);
+    @include flex(1);
+    @include justify-content(center);
+  }
 }
 
 // 480 PX
@@ -17,10 +34,6 @@
 // ------------------------------------
 
 @media only screen and (min-width: 768px) {
-
-  #content {
-    margin-left: $mainmenu + $submenu;
-  }
 
 }
 
