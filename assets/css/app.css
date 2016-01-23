@@ -182,6 +182,44 @@ button, .button {
   button.button--full, .button.button--full {
     width: 100%; }
 
+#alerts {
+  padding: 0; }
+
+.alert {
+  display: block;
+  margin: 0 auto 0.75em;
+  max-width: 320px;
+  padding: 0.75em;
+  text-align: center; }
+  .alert.alert--error {
+    background-color: #fbe3e4;
+    color: #97161b; }
+    .alert.alert--error a {
+      color: #6a0f13; }
+      .alert.alert--error a:hover {
+        color: #110203; }
+  .alert.alert--info {
+    background-color: #e5edf8;
+    color: #244e87; }
+    .alert.alert--info a {
+      color: #19375f; }
+      .alert.alert--info a:hover {
+        color: #04080e; }
+  .alert.alert--success {
+    background-color: #e6efc2;
+    color: #56651a; }
+    .alert.alert--success a {
+      color: #333c10; }
+      .alert.alert--success a:hover {
+        color: black; }
+  .alert.alert--warning {
+    background-color: #fff6bf;
+    color: #8c7800; }
+    .alert.alert--warning a {
+      color: #594c00; }
+      .alert.alert--warning a:hover {
+        color: black; }
+
 #mainmenu {
   background: #111111; }
   #mainmenu .brand {

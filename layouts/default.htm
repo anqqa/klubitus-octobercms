@@ -6,6 +6,22 @@ code = "main-menu"
 [session]
 security = "all"
 ==
+<?php
+function onInit() {
+    // Inject Flash messages
+
+    Event::listen('cms.page.display', function($controller, $url, $page, $result) {
+        if (Request::ajax() && is_object($result) && Flash::any()) {
+            $content = $result->original;
+            $content['#alerts'] = $controller->renderPartial('alerts');
+            $result->setContent($content);
+
+            return $result;
+        }
+    });
+}
+?>
+==
 <!doctype html>
 <html lang="en">
     <head>
@@ -55,6 +71,10 @@ security = "all"
 
         <div id="content" class="content {{ placeholder('sidebar') ? 'content--sidebar' }}">
             {% partial 'topbar' %}
+
+            <ul id="alerts">
+                {% partial 'alerts' %}
+            </ul>
 
             <div id="page">
                 {% page %}

@@ -14,7 +14,7 @@ $padding: 15px;
 $base-font-size: 13px !default;
 $base-line-height: 1.5em !default;
 $base-spacing: 1.5em !default;
-$base-transition-length: 0.1s;
+$base-transition-length: 0.1s !default;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
 $sans-serif: 'Noto Sans', sans-serif;
@@ -23,13 +23,17 @@ $serif: 'Radley', serif;
 // Default colors
 // ------------------------------------
 
-$accent-color:           #ffffff;
-$body-color:             #000000;
+$accent-color:           #ffffff !default;
+$body-color:             #000000 !default;
 $base-border-color:      #555555 !default;
 $secondary-border-color: transparentize($base-border-color, 0.5);
 $base-font-color:        #999999 !default;
 $base-link-color:        #ffffff !default;
-$input-background-color: #1e1e1e;
+$error-color:            #fbe3e4 !default;
+$info-color:             #e5edf8 !default;
+$input-background-color: #1e1e1e !default;
 $input-text-color:       $base-font-color;
-$mainmenu-color:         #111111;
-$submenu-color:          #222222;
+$mainmenu-color:         #111111 !default;
+$submenu-color:          #222222 !default;
+$success-color:          #e6efc2 !default;
+$warning-color:          #fff6bf !default;
