@@ -150,13 +150,15 @@ textarea {
   flex-flow: row wrap;
   margin-bottom: 1.5em; }
   .input .input__addon {
-    background: #1e1e1e;
     color: rgba(153, 153, 153, 0.5);
     line-height: 1.5em;
-    padding: 0.5em 0 0.5em 0.5em; }
+    padding: 0.5em 0 0.5em 0.5em;
+    position: absolute; }
     .input .input__addon.fa {
       text-align: center;
       width: 2em; }
+    .input .input__addon + .input__field {
+      padding-left: 2.5em; }
   .input .input__field {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -169,7 +171,6 @@ textarea {
     color: rgba(153, 153, 153, 0.5);
     flex: 1 100%;
     margin: 0.5em 0 0.5em 0.5em; }
-  .input.input--error .input__addon,
   .input.input--error .input__field {
     border-bottom: 2px solid #97161b; }
   .input.input--error .input__message {

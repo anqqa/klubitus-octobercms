@@ -32,14 +32,18 @@ textarea {
   margin-bottom: $base-spacing;
 
   .input__addon {
-    background: $input-background-color;
     color: transparentize($base-font-color, 0.5);
     line-height: $base-line-height;
     padding: ($base-spacing / 3) 0 ($base-spacing / 3) ($base-spacing / 3);
+    position: absolute;
 
     &.fa {
       text-align: center;
       width: 2em;
+    }
+
+    & + .input__field {
+      padding-left: 2em + ($base-spacing / 3);
     }
   }
 
@@ -54,7 +58,6 @@ textarea {
   }
 
   &.input--error {
-    .input__addon,
     .input__field {
       border-bottom: 2px solid darken($error-color, 60%);;
     }
