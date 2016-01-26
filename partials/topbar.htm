@@ -1,15 +1,9 @@
-description = "Content top bar."
-
-[viewBag]
-snippetCode = "topbar"
-snippetName = "Top bar"
-==
 <div id="topbar">
     {% if user %}
-        <a href="{{ 'logout'|page }}">Logout</a>
+        <a href="{{ 'logout'|page }}">{{ 'Logout'|_ }}</a>
     {% else %}
-        <a href="{{ 'login'|page }}">Login</a>
-        or
-        <a href="{{ 'register'|page }}">Register</a>
+        <a href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
+        {{ 'or'|_ }}
+        <a href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
     {% endif %}
 </div><!-- #topbar -->

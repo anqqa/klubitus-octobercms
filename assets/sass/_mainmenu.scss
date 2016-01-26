@@ -34,6 +34,13 @@
 
   .menu-home a:before { content: "\f015"; }
   .menu-events a:before { content: "\f073"; }
+
+  .language {
+    border-top: 1px solid $secondary-border-color;
+    margin: $padding / 2;
+    padding: $padding / 2 0;
+    text-align: center;
+  }
 }
 
 
@@ -62,9 +69,7 @@
 
     border-right: 1px solid $base-border-color;
 
-    ul {
-      text-align: center;
-    }
+    ul { text-align: center; }
   }
 
 }

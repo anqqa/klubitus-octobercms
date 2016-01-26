@@ -6,7 +6,7 @@ security = "all"
 <section id="login">
     {% component 'FacebookConnect' %}
 
-    <span class="separator">or</span>
+    <span class="separator">{{ 'or'|_ }}</span>
 
     <form data-request="{{ __SELF__ }}::onSignin">
 
@@ -16,8 +16,7 @@ security = "all"
                 name="login"
                 type="text"
                 class="input__field"
-                id="loginLogin"
-                placeholder="Username" />
+                placeholder="{{ 'Username'|_ }}" />
         </div>
 
         <div class="input">
@@ -26,13 +25,12 @@ security = "all"
                 name="password"
                 type="password"
                 class="input__field"
-                id="loginPassword"
-                placeholder="Password" />
+                placeholder="{{ 'Password'|_ }}" />
         </div>
 
-        <button type="submit" class="button button--full">Login with username</button>
+        <button type="submit" class="button button--full">{{ 'Login with username'|_ }}</button>
     </form>
     <br>
-    <a class="link--secondary right" href="{{ 'register'|page }}">Register</a>
-    <a class="link--secondary" href="{{ 'password'|page }}">Forgot password</a>
+    <a class="link--secondary right" href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
+    <a class="link--secondary" href="{{ 'password'|page }}">{{ 'Forgot password'|_ }}</a>
 </section>

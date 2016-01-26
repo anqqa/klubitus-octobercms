@@ -1,5 +1,5 @@
 <p>
-    Enter the restoration code you received in the email and choose a new password.
+    {{ 'Enter the restoration code you received in the email and choose a new password.'|_ }}
 </p>
 <form
     data-request="{{ __SELF__ }}::onResetPassword"
@@ -7,13 +7,13 @@
 
     <div class="input">
         <i class="input__addon fa fa-key"></i>
-        <input name="code" type="text" class="input__field" placeholder="Restoration code" value="{{ __SELF__.code }}">
+        <input name="code" type="text" class="input__field" placeholder="{{ 'Restoration code'|_ }}" value="{{ __SELF__.code }}">
     </div>
 
     <div class="input">
         <i class="input__addon fa fa-lock"></i>
-        <input name="password" type="password" class="input__field" placeholder="Choose a new password">
+        <input name="password" type="password" class="input__field" placeholder="{{ 'Choose a new password'|_ }}">
     </div>
 
-    <button type="submit" class="button button--primary button--full">Reset password</button>
+    <button type="submit" class="button button--primary button--full">{{ 'Reset password'|_ }}</button>
 </form>

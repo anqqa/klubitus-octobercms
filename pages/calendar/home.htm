@@ -12,7 +12,26 @@ day = "{{ :day }}"
 week = "{{ :week }}"
 month = "{{ :month }}"
 year = "{{ :year }}"
+
+[calendarEventList newEvents]
+eventPage = "calendar/event"
+listTitle = "New events"
+listType = "new"
+
+[calendarEventList updatedEvents]
+eventPage = "calendar/event"
+listTitle = "Updated events"
+listType = "updated"
 ==
+{% put submenu %}
+    <h1><a href="{{ 'calendar/home'|page }}">Events</a></h1>
+
+    {% component 'newEvents' %}
+
+    {% component 'updatedEvents' %}
+{% endput %}
+
+
 <h1>
     {{ title }}
 </h1>

@@ -1,0 +1,22 @@
+[staticMenu mainmenu]
+code = "main-menu"
+==
+<div class="brand">
+    <a href="{{  'home'|page }}">
+        <img src="{{ 'assets/img/logo.svg'|theme }}" alt="Logo" title="klubitus">
+    </a>
+</div>
+
+{% component 'mainmenu' %}
+
+<div class="language">
+    <i class="fa fa-language"></i>
+
+    {% for code, name in locales %}
+        <a
+                href="/{{ code }}"
+                title="{{ name }}"
+                data-request="onSwitchLocale"
+                data-request-data="locale: '{{ code }}'">{{ code }}</a>
+    {% endfor %}
+</div>

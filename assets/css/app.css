@@ -265,6 +265,11 @@ button, .button {
     content: "\f015"; }
   #mainmenu .menu-events a:before {
     content: "\f073"; }
+  #mainmenu .language {
+    border-top: 1px solid rgba(85, 85, 85, 0.5);
+    margin: 7.5px;
+    padding: 7.5px 0;
+    text-align: center; }
 
 @media only screen and (min-width: 768px) {
   #mainmenu {

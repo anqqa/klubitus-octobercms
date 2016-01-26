@@ -1,5 +1,5 @@
 <section id="password">
-    <h1>Forgot password</h1>
+    <h1>{{ 'Forgot password'|_ }}</h1>
     <div id="passwordForm">
         {% if __SELF__.code == null %}
             {% partial __SELF__ ~ '::restore' %}

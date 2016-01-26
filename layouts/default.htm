@@ -1,17 +1,14 @@
 description = "Default layout"
 
-[staticMenu mainmenu]
-code = "main-menu"
-
 [session]
 security = "all"
 
 [googleTracker]
+
+[localePicker]
 ==
 <?php
 function onInit() {
-    // Inject Flash messages
-
     Event::listen('cms.page.display', function($controller, $url, $page, $result) {
         if (Request::ajax() && is_object($result) && Flash::any()) {
             $content = $result->original;
@@ -25,7 +22,7 @@ function onInit() {
 ?>
 ==
 <!doctype html>
-<html lang="en">
+<html lang="{{ activeLocale }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
@@ -50,13 +47,7 @@ function onInit() {
 
         <nav id="mainmenu">
             <div class="wrapper">
-                <div class="brand">
-                    <a href="{{  'home'|page }}">
-                        <img src="{{ 'assets/img/logo.svg'|theme }}" alt="Logo" title="klubitus">
-                    </a>
-                </div>
-
-                {% component 'mainmenu' %}
+                {% partial 'mainmenu' %}
             </div>
         </nav><!-- #mainmenu -->
 

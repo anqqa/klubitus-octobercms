@@ -1,5 +1,5 @@
 <p>
-    Enter your email and we will send you a password reset mail.
+    {{ 'Enter your email and we will send you a password reset mail.'|_ }}
 </p>
 <form
     data-request="{{ __SELF__ }}::onRestorePassword"
@@ -7,8 +7,8 @@
 
     <div class="input">
         <i class="input__addon fa fa-envelope-o"></i>
-        <input name="email" type="email" class="input__field" placeholder="Email">
+        <input name="email" type="email" class="input__field" placeholder="{{ 'Email'|_ }}">
     </div>
 
-    <button type="submit" class="button button--primary button--full">Restore password</button>
+    <button type="submit" class="button button--primary button--full">{{ 'Reset password'|_ }}</button>
 </form>

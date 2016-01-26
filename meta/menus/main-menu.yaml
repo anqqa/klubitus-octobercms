@@ -1,7 +1,7 @@
 name: 'Main menu'
 items:
     -
-        title: Home
+        title: menu.home
         type: cms-page
         code: home
         reference: home
@@ -10,14 +10,10 @@ items:
             cssClass: menu-home
             isExternal: '0'
     -
-        title: Events
-        nesting: ''
+        title: menu.events
         type: cms-page
-        url: ''
         code: events
         reference: calendar/home
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: menu-events

@@ -1,5 +1,5 @@
 <section id="register">
-    <h1>Register</h1>
+    <h1>{{ 'Register'|_ }}</h1>
     <form data-request="onRegister">
 
         <div class="input">
@@ -8,7 +8,7 @@
                 name="email"
                 type="email"
                 class="input__field"
-                placeholder="Enter your email" />
+                placeholder="{{ 'Enter your email'|_ }}" />
         </div>
 
         <div class="input">
@@ -17,7 +17,7 @@
                 name="username"
                 type="text"
                 class="input__field"
-                placeholder="Choose a username" />
+                placeholder="{{ 'Choose a username'|_ }}" />
         </div>
 
         <div class="input">
@@ -26,11 +26,11 @@
                 name="password"
                 type="password"
                 class="input__field"
-                placeholder="Choose a password" />
+                placeholder="{{ 'Choose a password'|_ }}'" />
         </div>
 
-        <button type="submit" class="button button--primary button--full">Register</button>
+        <button type="submit" class="button button--primary button--full">{{ 'Register'|_ }}</button>
     </form>
     <br>
-    <a class="link--secondary" href="{{ 'login'|page }}">Login</a>
+    <a class="link--secondary" href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
 </section>
