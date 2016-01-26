@@ -6,6 +6,9 @@ is_hidden = 0
 
 [viewBag]
 
+[FacebookConnect]
+security = "all"
+
 [account login]
 redirect = "home"
 paramCode = "code"
@@ -21,5 +24,15 @@ public function onSignin() {
 ?>
 ==
 <div class="center">
-    {% component 'login' %}
+    <section id="login">
+        {% component 'FacebookConnect' %}
+
+        <span class="separator">{{ 'or'|_ }}</span>
+
+        {% component 'login' %}
+
+        <br>
+        <a class="link--secondary right" href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
+        <a class="link--secondary" href="{{ 'password'|page }}">{{ 'Forgot password'|_ }}</a>
+    </section>
 </div>

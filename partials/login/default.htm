@@ -1,36 +1,24 @@
-[FacebookConnect]
-security = "all"
-
 [viewBag]
 ==
-<section id="login">
-    {% component 'FacebookConnect' %}
+<form data-request="{{ __SELF__ }}::onSignin">
 
-    <span class="separator">{{ 'or'|_ }}</span>
+    <div class="input">
+        <i class="input__addon fa fa-user"></i>
+        <input
+            name="login"
+            type="text"
+            class="input__field"
+            placeholder="{{ 'Username'|_ }}" />
+    </div>
 
-    <form data-request="{{ __SELF__ }}::onSignin">
+    <div class="input">
+        <i class="input__addon fa fa-lock"></i>
+        <input
+            name="password"
+            type="password"
+            class="input__field"
+            placeholder="{{ 'Password'|_ }}" />
+    </div>
 
-        <div class="input">
-            <i class="input__addon fa fa-user"></i>
-            <input
-                name="login"
-                type="text"
-                class="input__field"
-                placeholder="{{ 'Username'|_ }}" />
-        </div>
-
-        <div class="input">
-            <i class="input__addon fa fa-lock"></i>
-            <input
-                name="password"
-                type="password"
-                class="input__field"
-                placeholder="{{ 'Password'|_ }}" />
-        </div>
-
-        <button type="submit" class="button button--full">{{ 'Login with username'|_ }}</button>
-    </form>
-    <br>
-    <a class="link--secondary right" href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
-    <a class="link--secondary" href="{{ 'password'|page }}">{{ 'Forgot password'|_ }}</a>
-</section>
+    <button type="submit" class="button button--full">{{ 'Login with username'|_ }}</button>
+</form>
