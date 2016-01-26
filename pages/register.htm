@@ -7,7 +7,22 @@ is_hidden = 0
 [account register]
 redirect = "home"
 paramCode = "code"
+
+[FacebookConnect]
+security = "all"
+
 ==
 <div class="center">
-    {% component 'register' %}    
+    <section id="register">
+        <h1>{{ 'Register'|_ }}</h1>
+
+        {% component 'FacebookConnect' %}
+
+        <span class="separator">{{ 'or'|_ }}</span>
+
+        {% component 'register' %}
+
+        <br>
+        <a class="link--secondary" href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
+    </section>
 </div>

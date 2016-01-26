@@ -1,36 +1,31 @@
-<section id="register">
-    <h1>{{ 'Register'|_ }}</h1>
-    <form data-request="onRegister">
+<form data-request="onRegister">
 
-        <div class="input">
-            <i class="input__addon fa fa-envelope-o"></i>
-            <input
-                name="email"
-                type="email"
-                class="input__field"
-                placeholder="{{ 'Email'|_ }}" />
-        </div>
+    <div class="input">
+        <i class="input__addon fa fa-envelope-o"></i>
+        <input
+            name="email"
+            type="email"
+            class="input__field"
+            placeholder="{{ 'Email'|_ }}" />
+    </div>
 
-        <div class="input">
-            <i class="input__addon fa fa-user"></i>
-            <input
-                name="username"
-                type="text"
-                class="input__field"
-                placeholder="{{ 'Choose a username'|_ }}" />
-        </div>
+    <div class="input">
+        <i class="input__addon fa fa-user"></i>
+        <input
+            name="username"
+            type="text"
+            class="input__field"
+            placeholder="{{ 'Choose a username'|_ }}" />
+    </div>
 
-        <div class="input">
-            <i class="input__addon fa fa-lock"></i>
-            <input
-                name="password"
-                type="password"
-                class="input__field"
-                placeholder="{{ 'Choose a password'|_ }}" />
-        </div>
+    <div class="input">
+        <i class="input__addon fa fa-lock"></i>
+        <input
+            name="password"
+            type="password"
+            class="input__field"
+            placeholder="{{ 'Choose a password'|_ }}" />
+    </div>
 
-        <button type="submit" class="button button--primary button--full">{{ 'Register'|_ }}</button>
-    </form>
-    <br>
-    <a class="link--secondary" href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
-</section>
+    <button type="submit" class="button button--full">{{ 'Register'|_ }}</button>
+</form>
