@@ -1,0 +1,13 @@
+<section id="password">
+    <h1>Forgot password</h1>
+    <div id="passwordForm">
+        {% if __SELF__.code == null %}
+            {% partial __SELF__ ~ '::restore' %}
+        {% else %}
+            {% partial __SELF__ ~ '::reset' %}
+        {% endif %}
+    </div>
+    <br>
+    <a class="link--secondary right" href="{{ 'register'|page }}">Register</a>
+    <a class="link--secondary" href="{{ 'login'|page }}">Login</a>
+</section>

@@ -6,7 +6,7 @@ textarea {
   background: $input-background-color;
   border: 0;
   outline: none;
-  padding: ($base-spacing / 3) ($base-spacing / 3);
+  padding: ($base-spacing / 3);
 
   @include placeholder {
     color: transparentize($base-font-color, 0.5);
@@ -18,15 +18,21 @@ textarea {
       color: transparentize($base-font-color, 0.25);
     }
   }
+
+  &.input__field--error {
+    border-bottom: 2px solid $error-color;
+  }
 }
+
 
 .input {
   @include display(flex);
+  @include flex-flow(row wrap);
 
-  background: $input-background-color;
   margin-bottom: $base-spacing;
 
   .input__addon {
+    background: $input-background-color;
     color: transparentize($base-font-color, 0.5);
     line-height: $base-line-height;
     padding: ($base-spacing / 3) 0 ($base-spacing / 3) ($base-spacing / 3);
@@ -39,8 +45,23 @@ textarea {
 
   .input__field {
     @include flex(1);
+  }
 
-    background: none;
+  .input__message {
+    color: transparentize($base-font-color, 0.5);
+    flex: 1 100%;
+    margin: ($base-spacing / 3) 0 ($base-spacing / 3) ($base-spacing / 3);
+  }
+
+  &.input--error {
+    .input__addon,
+    .input__field {
+      border-bottom: 2px solid darken($error-color, 60%);;
+    }
+
+    .input__message {
+      color: darken($error-color, 60%);
+    }
   }
 }
 

@@ -4,10 +4,11 @@ layout = "default"
 description = "Login screen."
 is_hidden = 0
 
-[account]
-paramCode = "code"
+[viewBag]
 
-[FacebookConnect]
+[account login]
+redirect = "home"
+paramCode = "code"
 ==
 <?php
 use Klubitus\User\Classes\KohanaAuth;
@@ -20,5 +21,5 @@ public function onSignin() {
 ?>
 ==
 <div class="center">
-    {% partial 'login' %}
+    {% component 'login' %}
 </div>

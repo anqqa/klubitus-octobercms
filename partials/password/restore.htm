@@ -1,0 +1,14 @@
+<p>
+    Enter your email and we will send you a password reset mail.
+</p>
+<form
+    data-request="{{ __SELF__ }}::onRestorePassword"
+    data-request-update="'{{ __SELF__ }}::reset': '#passwordForm'">
+
+    <div class="input">
+        <i class="input__addon fa fa-envelope-o"></i>
+        <input name="email" type="email" class="input__field" placeholder="Email">
+    </div>
+
+    <button type="submit" class="button button--primary button--full">Restore password</button>
+</form>

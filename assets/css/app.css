@@ -73,6 +73,7 @@ h3 {
 
 .separator {
   display: block;
+  font-variant: small-caps;
   margin: 1.5em 0;
   overflow: hidden;
   text-align: center; }
@@ -103,7 +104,7 @@ textarea {
   background: #1e1e1e;
   border: 0;
   outline: none;
-  padding: 0.5em 0.5em; }
+  padding: 0.5em; }
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     color: rgba(153, 153, 153, 0.5);
@@ -132,6 +133,9 @@ textarea {
   input:hover:-ms-input-placeholder,
   textarea:hover:-ms-input-placeholder {
     color: rgba(153, 153, 153, 0.75); }
+  input.input__field--error,
+  textarea.input__field--error {
+    border-bottom: 2px solid #fbe3e4; }
 
 .input {
   display: -webkit-box;
@@ -141,9 +145,12 @@ textarea {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #1e1e1e;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-bottom: 1.5em; }
   .input .input__addon {
+    background: #1e1e1e;
     color: rgba(153, 153, 153, 0.5);
     line-height: 1.5em;
     padding: 0.5em 0 0.5em 0.5em; }
@@ -157,8 +164,16 @@ textarea {
     -webkit-flex: 1;
     -moz-flex: 1;
     -ms-flex: 1;
-    flex: 1;
-    background: none; }
+    flex: 1; }
+  .input .input__message {
+    color: rgba(153, 153, 153, 0.5);
+    flex: 1 100%;
+    margin: 0.5em 0 0.5em 0.5em; }
+  .input.input--error .input__addon,
+  .input.input--error .input__field {
+    border-bottom: 2px solid #97161b; }
+  .input.input--error .input__message {
+    color: #97161b; }
 
 button, .button {
   -webkit-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
@@ -354,6 +369,8 @@ button, .button {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1; }
+  #page h1 {
+    margin-bottom: 0.9em; }
   #page .center {
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -391,7 +408,9 @@ button, .button {
 #sidebar {
   padding: 15px; }
 
-#login {
+#login,
+#password,
+#register {
   width: 280px; }
 
 .events .event {

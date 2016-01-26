@@ -1,17 +1,23 @@
+[FacebookConnect]
+security = "all"
+
+[viewBag]
+==
 <section id="login">
     {% component 'FacebookConnect' %}
 
     <span class="separator">or</span>
 
-    <form data-request="onSignin">
+    <form data-request="{{ __SELF__ }}::onSignin">
+
         <div class="input">
-            <i class="input__addon fa fa-envelope-o"></i>
+            <i class="input__addon fa fa-user"></i>
             <input
                 name="login"
                 type="text"
                 class="input__field"
                 id="loginLogin"
-                placeholder="Email or username" />
+                placeholder="Username" />
         </div>
 
         <div class="input">
@@ -24,7 +30,7 @@
                 placeholder="Password" />
         </div>
 
-        <button type="submit" class="button button--full">Login</button>
+        <button type="submit" class="button button--full">Login with username</button>
     </form>
     <br>
     <a class="link--secondary right" href="{{ 'register'|page }}">Register</a>

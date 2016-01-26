@@ -14,6 +14,10 @@
   @include display(flex);
   @include flex(1);
 
+  h1 {
+    margin-bottom: 0.9em;
+  }
+
   .center {
     @include align-items(center);
     @include display(flex);
@@ -21,6 +25,7 @@
     @include justify-content(center);
   }
 }
+
 
 // 480 PX
 // ------------------------------------

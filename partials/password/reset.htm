@@ -1,0 +1,19 @@
+<p>
+    Enter the restoration code you received in the email and choose a new password.
+</p>
+<form
+    data-request="{{ __SELF__ }}::onResetPassword"
+    data-request-update="'{{ __SELF__ }}::complete': '#passwordForm'">
+
+    <div class="input">
+        <i class="input__addon fa fa-key"></i>
+        <input name="code" type="text" class="input__field" placeholder="Restoration code" value="{{ __SELF__.code }}">
+    </div>
+
+    <div class="input">
+        <i class="input__addon fa fa-lock"></i>
+        <input name="password" type="password" class="input__field" placeholder="Choose a new password">
+    </div>
+
+    <button type="submit" class="button button--primary button--full">Reset password</button>
+</form>
