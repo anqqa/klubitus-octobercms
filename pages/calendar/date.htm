@@ -1,12 +1,12 @@
-title = "Calendar"
-url = "/events"
+title = "Date Calendar"
+url = "/events/:year|^[0-9]+$/:month|^[01]?[0-9]$/:day?|^[0-3]?[0-9]$"
 layout = "default"
-description = "Upcoming events."
+description = "Monthly/daily event calendar."
 is_hidden = 0
 
 [calendarEvents]
 eventPage = "calendar/event"
-paginationPage = "calendar/week"
+paginationPage = "calendar/date"
 day = "{{ :day }}"
 week = "{{ :week }}"
 month = "{{ :month }}"
@@ -22,6 +22,12 @@ eventPage = "calendar/event"
 listTitle = "Updated events"
 listType = "updated"
 ==
+<?php
+function onInit() {
+    $this['activeMenuItem'] = 'events';
+}
+?>
+==
 {% put submenu %}
     <h1><a href="{{ 'calendar/home'|page }}">{{ 'Events'|_ }}</a></h1>
 
@@ -29,7 +35,6 @@ listType = "updated"
 
     {% component 'updatedEvents' %}
 {% endput %}
-
 
 <h1>
     {{ title }}

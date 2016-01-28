@@ -7,11 +7,20 @@ is_hidden = 0
 [calendarEvents]
 eventPage = "calendar/event"
 paginationPage = "calendar/week"
-datePeriod = "week"
 day = "{{ :day }}"
 week = "{{ :week }}"
 month = "{{ :month }}"
 year = "{{ :year }}"
+
+[calendarEventList newEvents]
+eventPage = "calendar/event"
+listTitle = "New events"
+listType = "new"
+
+[calendarEventList updatedEvents]
+eventPage = "calendar/event"
+listTitle = "Updated events"
+listType = "updated"
 ==
 <?php
 function onInit() {
@@ -20,7 +29,11 @@ function onInit() {
 ?>
 ==
 {% put submenu %}
-    <h1><a href="{{ 'calendar/home'|page }}">Events</a></h1>
+    <h1><a href="{{ 'calendar/home'|page }}">{{ 'Events'|_ }}</a></h1>
+
+    {% component 'newEvents' %}
+
+    {% component 'updatedEvents' %}
 {% endput %}
 
 <h1>
