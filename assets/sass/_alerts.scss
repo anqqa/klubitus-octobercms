@@ -16,6 +16,8 @@
 
 #alerts {
   padding: 0;
+
+  &:empty { display: none; }
 }
 
 .alert {

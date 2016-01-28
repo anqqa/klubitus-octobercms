@@ -200,6 +200,8 @@ button, .button {
 
 #alerts {
   padding: 0; }
+  #alerts:empty {
+    display: none; }
 
 .alert {
   display: block;
@@ -374,7 +376,17 @@ button, .button {
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
-  flex: 1; }
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column; }
   #page h1 {
     margin-bottom: 0.9em; }
   #page .center {
