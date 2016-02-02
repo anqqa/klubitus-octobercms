@@ -1,1 +1,1 @@
-{% flash %}<li class="alert alert--{{ type }}">{{ message }}</li>{%  endflash %}
+{% flash %}<li class="alert alert--{{ type }}">{{ message|raw }}</li>{% endflash %}

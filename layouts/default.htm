@@ -13,6 +13,8 @@ function onInit() {
         if (Request::ajax() && is_object($result) && Flash::any()) {
             $content = $result->original;
             $content['#alerts'] = $controller->renderPartial('alerts');
+            Flash::purge();
+
             $result->setContent($content);
 
             return $result;
