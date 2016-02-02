@@ -509,3 +509,5 @@ section.event {
     section.event header img {
       height: auto;
       width: 100%; }
+    section.event header button {
+      text-transform: uppercase; }
