@@ -58,6 +58,11 @@ h3 {
   line-height: 1.3em;
   margin-bottom: 0.4em; }
 
+hr {
+  border: solid rgba(85, 85, 85, 0.5);
+  border-width: 1px 0 0 0;
+  margin: 1.5em; }
+
 .date {
   color: rgba(153, 153, 153, 0.4);
   font-style: italic; }
@@ -400,7 +405,7 @@ button, .button {
   -ms-flex-direction: column;
   padding: 15px; }
 
-#page {
+main {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -425,9 +430,11 @@ button, .button {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column; }
-  #page h1 {
+  main h1 {
     margin-bottom: 0.9em; }
-  #page .center {
+  main > section {
+    margin: 0 auto; }
+  main .center {
     -webkit-box-align: center;
     -moz-box-align: center;
     box-align: center;
@@ -469,21 +476,36 @@ button, .button {
 #register {
   width: 280px; }
 
-.events .event {
+section.events .event {
   border-top: 1px solid rgba(85, 85, 85, 0.5);
   margin: 5px 0; }
 
-.events .event:first-child {
+section.events .event:first-child {
   border-top: none; }
 
-.events .event__city {
+section.events .event__city {
   float: right; }
 
-.events .media__image {
+section.events .media__image {
   max-height: 120px;
   width: 120px; }
-  .events .media__image:hover {
+  section.events .media__image:hover {
     overflow: visible; }
 
 .events--list .date {
   float: right; }
+
+section.event {
+  max-width: 55em; }
+  section.event header {
+    text-align: center;
+    text-transform: uppercase; }
+    section.event header h1,
+    section.event header h2 {
+      color: #ffffff; }
+    section.event header h1 {
+      font-size: 2em;
+      line-height: 1em; }
+    section.event header img {
+      height: auto;
+      width: 100%; }

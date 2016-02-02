@@ -3,13 +3,8 @@ url = "/event/:event_id|^[0-9]+"
 layout = "default"
 description = "Single event view."
 is_hidden = 0
-==
-<?php
-use Klubitus\Calendar\Models\Event;
 
-function onStart() {
-    $this['event'] = Event::findOrFail((int)$this->param('event_id'));
-}
-?>
+[calendarEvent]
+id = "{{ :event_id }}"
 ==
-<h1>{{ event.name }}</h1>
+{% component 'calendarEvent' %}
