@@ -40,8 +40,19 @@
         event.preventDefault();
     });
 
-    $(document).ready(function() {
 
+    // Dismiss alerts
+    $('#alerts').on('click', '.alert .button--close', function(event) {
+        event.preventDefault();
+
+        $(this).parent('.alert').hide(100, function() {
+            $(this).remove();
+        });
+    });
+
+
+
+    $(document).ready(function() {
     });
 
 }(window.jQuery));

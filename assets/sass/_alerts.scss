@@ -5,7 +5,8 @@
   background-color: $color;
   color: darken($color, 60%);
 
-  a {
+  a,
+  button {
     color: darken($color, 70%);
 
     &:hover {
@@ -14,8 +15,12 @@
   }
 }
 
+
 #alerts {
-  padding: 0;
+  margin: $base-spacing 0;
+  padding: 0 $base-spacing 0 0;
+  position: fixed;
+  width: 100%;
 
   &:empty { display: none; }
 }
@@ -25,6 +30,7 @@
   margin: 0 auto $base-spacing / 2;
   max-width: 320px;
   padding: $base-spacing / 2;
+  position: relative;
   text-align: center;
 
   &.alert--error {
@@ -41,6 +47,10 @@
 
   &.alert--warning {
     @include flash($warning-color);
+  }
+
+  .button--close {
+    @include position(absolute, ($base-spacing / 6) ($base-spacing / 6) null null);
   }
 }
 

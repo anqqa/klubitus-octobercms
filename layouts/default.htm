@@ -67,7 +67,9 @@ function onInit() {
         <div id="content" class="content {{ placeholder('sidebar') ? 'content--sidebar' }}">
             {% partial 'topbar' %}
 
-            <ul id="alerts">{% partial 'alerts' %}</ul>
+            <ul id="alerts">
+                {% partial 'alerts' %}
+            </ul>
 
             <main role="main">
                 {% page %}
