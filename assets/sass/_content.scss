@@ -21,6 +21,10 @@ main {
 
   & > section {
     margin: 0 auto;
+
+    &.full {
+      width: 100%;
+    }
   }
 
   .center {

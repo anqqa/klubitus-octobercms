@@ -142,6 +142,32 @@ nav ul {
 nav ul li {
   display: inline; }
 
+button, .button {
+  -webkit-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
+  background: none;
+  border: 1px solid #555555;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  text-align: center; }
+  button:hover, .button:hover {
+    border-color: #959595;
+    text-decoration: none; }
+  button.button--primary, .button.button--primary {
+    background: #ffffff;
+    color: #000000;
+    border: none; }
+    button.button--primary:hover, .button.button--primary:hover {
+      background: #bfbfbf; }
+  button.button--close, .button.button--close {
+    border: 0 none; }
+  button[disabled], button.button--disabled, .button[disabled], .button.button--disabled {
+    cursor: default; }
+  button.button--full, .button.button--full {
+    width: 100%; }
+
 input,
 textarea {
   background: #1e1e1e;
@@ -219,30 +245,43 @@ textarea {
   .input.input--error .input__message {
     color: #97161b; }
 
-button, .button {
-  -webkit-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
-  -moz-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
-  background: none;
-  border: 1px solid #555555;
-  color: #ffffff;
-  display: inline-block;
-  padding: 0.5em 0.5em;
-  text-align: center; }
-  button:hover, .button:hover {
-    border-color: #959595;
-    text-decoration: none; }
-  button.button--primary, .button.button--primary {
-    background: #ffffff;
-    border: none;
-    color: #000000; }
-    button.button--primary:hover, .button.button--primary:hover {
-      background: #bfbfbf; }
-  button.button--full, .button.button--full {
-    width: 100%; }
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%; }
+  .table th,
+  .table td {
+    border-bottom: 0;
+    padding: 0.75em 1.5em;
+    vertical-align: top; }
+    .table th > *:first-child,
+    .table td > *:first-child {
+      margin-top: 0; }
+    .table th > *:last-child,
+    .table td > *:last-child {
+      margin-bottom: 0; }
+  .table thead th {
+    text-align: left; }
+  .table tbody tr:hover > td,
+  .table tbody tr:hover > th {
+    background-color: rgba(128, 128, 128, 0.1); }
+  .table tbody tr:first-child td {
+    border-top: 2px solid rgba(85, 85, 85, 0.5); }
+  .table tbody td,
+  .table tbody th {
+    border-top: 1px solid rgba(85, 85, 85, 0.5);
+    line-height: 1.5em; }
+  .table .table__count {
+    text-align: right; }
+  .table.table--condensed th > *,
+  .table.table--condensed td > * {
+    margin: 0; }
 
 #alerts {
-  padding: 0; }
+  margin: 1.5em 0;
+  padding: 0 1.5em 0 0;
+  position: fixed;
+  width: 100%; }
   #alerts:empty {
     display: none; }
 
@@ -251,35 +290,48 @@ button, .button {
   margin: 0 auto 0.75em;
   max-width: 320px;
   padding: 0.75em;
+  position: relative;
   text-align: center; }
   .alert.alert--error {
     background-color: #fbe3e4;
     color: #97161b; }
-    .alert.alert--error a {
+    .alert.alert--error a,
+    .alert.alert--error button {
       color: #6a0f13; }
-      .alert.alert--error a:hover {
+      .alert.alert--error a:hover,
+      .alert.alert--error button:hover {
         color: #110203; }
   .alert.alert--info {
     background-color: #e5edf8;
     color: #244e87; }
-    .alert.alert--info a {
+    .alert.alert--info a,
+    .alert.alert--info button {
       color: #19375f; }
-      .alert.alert--info a:hover {
+      .alert.alert--info a:hover,
+      .alert.alert--info button:hover {
         color: #04080e; }
   .alert.alert--success {
     background-color: #e6efc2;
     color: #56651a; }
-    .alert.alert--success a {
+    .alert.alert--success a,
+    .alert.alert--success button {
       color: #333c10; }
-      .alert.alert--success a:hover {
+      .alert.alert--success a:hover,
+      .alert.alert--success button:hover {
         color: black; }
   .alert.alert--warning {
     background-color: #fff6bf;
     color: #8c7800; }
-    .alert.alert--warning a {
+    .alert.alert--warning a,
+    .alert.alert--warning button {
       color: #594c00; }
-      .alert.alert--warning a:hover {
+      .alert.alert--warning a:hover,
+      .alert.alert--warning button:hover {
         color: black; }
+  .alert .button--close {
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em; }
 
 #mainmenu {
   background: #111111; }
@@ -311,6 +363,8 @@ button, .button {
     content: "\f015"; }
   #mainmenu .menu-events a:before {
     content: "\f073"; }
+  #mainmenu .menu-forum a:before {
+    content: "\f086"; }
   #mainmenu .language {
     border-top: 1px solid rgba(85, 85, 85, 0.5);
     margin: 7.5px;
@@ -434,6 +488,8 @@ main {
     margin-bottom: 0.9em; }
   main > section {
     margin: 0 auto; }
+    main > section.full {
+      width: 100%; }
   main .center {
     -webkit-box-align: center;
     -moz-box-align: center;

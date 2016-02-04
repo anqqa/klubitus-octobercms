@@ -69,40 +69,6 @@ textarea {
 }
 
 
-button, .button {
-  @include transition(
-                  background $base-transition-length ease-in-out,
-                  border $base-transition-length ease-in-out
-  );
-
-  background: none;
-  border: 1px solid $base-border-color;
-  color: $base-link-color;
-  display: inline-block;
-  padding: ($base-spacing / 3) ($base-spacing / 3);
-  text-align: center;
-
-  &:hover {
-    border-color: lighten($base-border-color, 25%);
-    text-decoration: none;
-  }
-
-  &.button--primary {
-    background: $accent-color;
-    border: none;
-    color: $body-color;
-
-    &:hover {
-      background: darken($accent-color, 25%);
-    }
-  }
-
-  &.button--full {
-    width: 100%;
-  }
-}
-
-
 // 480 PX
 // ------------------------------------
 

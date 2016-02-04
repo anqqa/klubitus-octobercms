@@ -6,6 +6,8 @@ $submenu:  230px;
 $sidebar:  300px;
 $topbar:   50px;
 
+$base-spacing: 1.5em !default;
+$base-transition-length: 0.1s !default;
 $padding: 15px;
 
 // Typography
@@ -14,14 +16,13 @@ $padding: 15px;
 $base-font-size: 13px !default;
 $base-line-height: 1.5em !default;
 $base-line-width: 55em !default;
-$base-spacing: 1.5em !default;
-$base-transition-length: 0.1s !default;
 $font-weight-bold: 700;
 $font-weight-normal: 400;
 $header-font: 'Montserrat', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 $sans-serif: $body-font;
 $serif: serif;
+
 
 // Default colors
 // ------------------------------------

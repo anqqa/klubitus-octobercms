@@ -1,0 +1,48 @@
+@mixin button($background-color, $foreground-color) {
+  background: $background-color;
+  color: $foreground-color;
+
+  &:hover {
+    background: darken($background-color, 25%);
+  }
+}
+
+
+button, .button {
+  @include transition(
+                  background $base-transition-length ease-in-out,
+                  border $base-transition-length ease-in-out
+  );
+
+  background: none;
+  border: 1px solid $base-border-color;
+  color: $base-link-color;
+  display: inline-block;
+  padding: ($base-spacing / 3) ($base-spacing / 3);
+  text-align: center;
+
+  &:hover {
+    border-color: lighten($base-border-color, 25%);
+    text-decoration: none;
+  }
+
+  &.button--primary {
+    @include button($accent-color, $body-color);
+
+    border: none;
+  }
+
+  &.button--close {
+    border: 0 none;
+  }
+
+  &[disabled],
+  &.button--disabled {
+    cursor: default;
+  }
+
+  &.button--full {
+    width: 100%;
+  }
+
+}
