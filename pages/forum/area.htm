@@ -1,0 +1,14 @@
+title = "Forum Area"
+url = "/forum/:area_id|^[0-9]+"
+layout = "default"
+description = "Forum area."
+is_hidden = 0
+
+[forumArea]
+id = "{{ :area_id }}"
+==
+<h1>
+    {{ title }}
+</h1>
+
+{% component 'forumArea' %}

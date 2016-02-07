@@ -111,9 +111,6 @@ hr {
 .right {
   float: right; }
 
-.pagination {
-  text-align: center; }
-
 .separator {
   display: block;
   font-variant: small-caps;
@@ -141,6 +138,21 @@ nav ul {
 
 nav ul li {
   display: inline; }
+
+.pagination {
+  text-align: center; }
+
+ul.pagination {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+  ul.pagination li {
+    display: inline;
+    list-style: none; }
+    ul.pagination li.active {
+      font-size: 1.1em;
+      font-weight: 700;
+      line-height: 0.95em; }
 
 button, .button {
   -webkit-transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
