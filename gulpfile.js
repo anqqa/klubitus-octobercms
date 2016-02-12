@@ -13,6 +13,10 @@ gulp.task('sass', function() {
   gulp.src('assets/sass/app.scss')
       .pipe($.sass())
       .pipe(gulp.dest('assets/css'))
+
+  gulp.src('assets/sass/fbapp.scss')
+      .pipe($.sass())
+      .pipe(gulp.dest('assets/css'))
 });
 
 

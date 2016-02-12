@@ -1,0 +1,58 @@
+description = "Default layout"
+
+[session]
+security = "all"
+
+[googleTracker]
+
+[localePicker]
+==
+<?php
+function onInit() {
+    Event::listen('cms.page.display', function($controller, $url, $page, $result) {
+        if (Request::ajax() && is_object($result) && Flash::any()) {
+            $content = $result->original;
+            $content['#alerts'] = $controller->renderPartial('alerts');
+            Flash::purge();
+
+            $result->setContent($content);
+
+            return $result;
+        }
+    });
+}
+?>
+==
+<!doctype html>
+<html lang="{{ activeLocale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="{{ [
+            'assets/css/normalize.css'
+        ]|theme }}" rel="stylesheet">
+        <link href="{{ [
+            'assets/css/fbapp.css'
+        ]|theme }}" rel="stylesheet">
+
+        {% placeholder head %}
+
+        <title>{{ this.page.title }}</title>
+    </head>
+
+    <body>
+
+        {% page %}
+
+        <script src="{{ [
+            '@jquery',
+        ]|theme }}"></script>
+
+        {% component 'googleTracker' %}
+
+        {% scripts %}
+    </body>
+</html>
