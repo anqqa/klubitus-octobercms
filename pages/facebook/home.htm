@@ -4,4 +4,19 @@ layout = "facebook"
 description = "Facebook canvas page"
 is_hidden = 0
 ==
-TBA
+use Klubitus\Calendar\Models\Event;
+
+function onStart() {
+    $events = Event::upcoming()->orderDefault()->get();
+
+    $events->each(function($event) {
+        $event->date = $event->begins_at->toDateString();
+        //$event->setUrl($this->eventPage, $this->controller);
+    });
+
+    $this['events'] = $events;
+}
+==
+<h1>{{ 'Upcoming events'|_ }}</h1>
+
+{% partial 'facebook/events' %}
