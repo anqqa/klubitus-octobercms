@@ -1,0 +1,50 @@
+body {
+  color: $base-font-color;
+  font-family: $body-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1 {
+
+}
+
+a {
+  color: $base-link-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.link--secondary {
+    color: $base-font-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: $base-link-color;
+    }
+  }
+}
+
+th {
+  background: $base-border-color;
+  color: $secondary-font-color;
+  font-size: 0.9em;
+  font-weight: normal;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.event {
+  font-weight: bold;
+}
+
+.city {
+  color: $secondary-font-color;
+}

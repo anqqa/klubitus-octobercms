@@ -4,18 +4,35 @@ layout = "facebook"
 description = "Facebook canvas page"
 is_hidden = 0
 ==
+<?php
 use Klubitus\Calendar\Models\Event;
 
 function onStart() {
-    $events = Event::upcoming()->orderDefault()->get();
+    $events = Event::with('venue')
+        ->upcoming()
+        ->orderDefault()
+        ->get();
 
     $events->each(function($event) {
         $event->date = $event->begins_at->toDateString();
-        //$event->setUrl($this->eventPage, $this->controller);
+
+        if ($event->venue && $event->venue->facebook_id) {
+            $event->venueUrl = 'https://www.facebook.com/' . $event->venue->facebook_id;
+        }
+
+        if ($event->url && $event->facebook_id) {
+            $event->eventUrl = $event->url;
+        }
+/*
+        else {
+            $event->eventUrl = $event->setUrl('facebook/event', $this->controller);
+        }
+*/
     });
 
     $this['events'] = $events;
 }
+?>
 ==
 <h1>{{ 'Upcoming events'|_ }}</h1>
 

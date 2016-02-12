@@ -1,17 +1,35 @@
 @charset "UTF-8";
 
+// Config
+// ------------------------------------
+
+$base-font-size:         13px !default;
+$base-line-height:       1.5em !default;
+$base-spacing:           0.5em;
+
+//$body-font:              'Lucida Grande', Tahoma, sans-serif;
+$body-font:              Helvetica, Arial, sans-serif;
+
+$base-border-color:      #f6f7f8 !default;
+$secondary-border-color: #e9eaed;
+$base-font-color:        #4e5665 !default;
+$secondary-font-color:   #9197a3;
+$base-link-color:        #3b5998 !default;
+
+
+
 // Vendor
 // ------------------------------------
 
 @import "vendor/bourbon/bourbon";
-@import "vendor/neat/neat-helpers";
-@import "config";
-@import "vendor/neat/neat";
+//@import "vendor/neat/neat-helpers";
+//@import "config";
+//@import "vendor/neat/neat";
 
 
 // Local
 // ------------------------------------
 
-@import "mixins";
+@import "tables";
 
 @import "facebook";

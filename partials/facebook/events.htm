@@ -1,21 +1,49 @@
 {% set date = null %}
 
-<section>
+<table class="table">
 
     {% for event in events %}
 
         {% if event.date != date %}
+            {{ date != null ? '</tbody>' }}
+
             {% set date = event.date %}
 
-            <h2>{{ event.begins_at|strftime('%A, %e. %B') }}</h2>
+    <thead>
+        <tr>
+            <th colspan="4">
+                {{ event.begins_at|strftime('%A, %e. %B') }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
         {% endif %}
 
-        <article>
-            {{ event.begins_at|date('H:i') }} - {{ event.ends_at|date('H:i') }}
-            <a href="{{ event.url }}">{{ event.name }}</a> @
-            {{ event.venue_name }}, {{ event.city_name }}
-        </article>
+        <tr>
+            <td class="date">
+                {{ event.begins_at|date('H:i') }} - {{ event.ends_at|date('H:i') }}
+            </td>
+            <td class="event">
+                {% if event.eventUrl %}
+                    <a href="{{ event.url }}" target="_top">{{ event.name }}</a>
+                {% else %}
+                    {{ event.name }}
+                {% endif %}
+            </td>
+            <td class="venue">
+                {% if event.venueUrl %}
+                    <a href="{{ event.venueUrl }}" target="_top">{{ event.venue_name }}</a>
+                {% else %}
+                    {{ event.venue_name }}
+                {% endif %}
+            </td>
+            <td class="city">
+                {{ event.city_name}}
+            </td>
+        </tr>
 
     {% endfor %}
 
-</section>
+    </tbody>
+</table>
