@@ -1,12 +1,12 @@
-title = "Forum"
-url = "/forum"
+title = "Forum Topic"
+url = "/topic/:topic_id|^[0-9]+"
 layout = "default"
-description = "Forum areas."
+description = "Forum topic."
 is_hidden = 0
 
-[forumAreas]
+[forumTopic]
+id = "{{ :topic_id }}"
 areaPage = "forum/area"
-topicPage = "forum/topic"
 ==
 {% put submenu %}
     {% partial 'forum/submenu' %}
@@ -16,4 +16,5 @@ topicPage = "forum/topic"
 <h1>
     {{ title }}
 </h1>
-{% component 'forumAreas' %}
+
+{% component 'forumTopic' %}

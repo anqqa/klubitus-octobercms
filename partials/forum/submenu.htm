@@ -1,0 +1,17 @@
+[forumTopics forumNewPosts]
+topicPage = "forum/topic"
+listType = "new_posts"
+
+[forumTopics forumNewTopics]
+topicPage = "forum/topic"
+listType = "new_topics"
+==
+<h1><a href="{{ 'forum/home'|page }}">{{ 'Forum'|_ }}</h1>
+
+<hr>
+
+{% component 'forumNewPosts' %}
+
+<hr>
+
+{% component 'forumNewTopics' %}

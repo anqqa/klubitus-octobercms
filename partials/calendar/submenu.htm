@@ -1,0 +1,22 @@
+[staticMenu submenu]
+code = "galleries-menu"
+
+[calendarEventList newEvents]
+eventPage = "calendar/event"
+listTitle = "New events"
+listType = "new"
+
+[calendarEventList updatedEvents]
+eventPage = "calendar/event"
+listTitle = "Updated events"
+listType = "updated"
+==
+<h1><a href="{{ 'calendar/home'|page }}">{{ 'Events'|_ }}</a></h1>
+
+<hr>
+
+{% component 'newEvents' %}
+
+<hr>
+
+{% component 'updatedEvents' %}
