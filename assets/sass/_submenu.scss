@@ -17,10 +17,10 @@
     }
   }
 
-  section {
+/*  section {
     border-top: 1px solid $secondary-border-color;
     margin: 5px 0;
-  }
+  }*/
 
   a {
     color: $base-font-color;
@@ -37,6 +37,23 @@
   ol {
     list-style: none;
     padding: 0;
+  }
+
+  ul li {
+    font-weight: $font-weight-bold;
+
+    a {
+      color: $base-font-color;
+      display: block;
+      text-decoration: none;
+
+      .fa {
+        float: right;
+      }
+    }
+
+    a:hover,
+    &.active a { color: $base-link-color; }
   }
 
 }

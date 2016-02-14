@@ -1,0 +1,27 @@
+title = "Flyers"
+url = "/flyers"
+layout = "default"
+description = "Flyer galleries."
+is_hidden = 0
+
+[galleryFlyers]
+listType = "new_flyers"
+month = "{{ :month }}"
+year = "{{ :year }}"
+==
+<?php
+function onInit() {
+    $this['activeMenuItem'] = 'galleries';
+}
+?>
+==
+{% put submenu %}
+    {% partial 'galleries/submenu' activeMenuItem='flyers' %}
+{% endput %}
+
+
+<h1>
+    {{ 'Latest flyers'|_ }}
+</h1>
+
+{% component 'galleryFlyers' %}

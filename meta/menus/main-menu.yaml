@@ -28,10 +28,23 @@ items:
             isExternal: '0'
     -
         title: menu.forum
+        nesting: ''
         type: cms-page
+        url: ''
         code: forum
         reference: forum/home
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: menu-forum
+            isExternal: '0'
+    -
+        title: menu.galleries
+        type: cms-page
+        code: galleries
+        reference: galleries/home
+        viewBag:
+            isHidden: '0'
+            cssClass: menu-galleries
             isExternal: '0'

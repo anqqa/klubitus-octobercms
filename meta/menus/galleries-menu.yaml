@@ -1,0 +1,11 @@
+name: Galleries
+items:
+    -
+        title: menu.flyers
+        type: cms-page
+        code: flyers
+        reference: galleries/flyers
+        viewBag:
+            isHidden: '0'
+            cssClass: menu-flyers
+            isExternal: '0'

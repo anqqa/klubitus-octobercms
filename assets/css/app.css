@@ -345,6 +345,10 @@ textarea {
     top: 0.25em;
     right: 0.25em; }
 
+.grid__item {
+  float: left;
+  overflow: hidden; }
+
 #mainmenu {
   background: #111111; }
   #mainmenu .brand {
@@ -377,6 +381,8 @@ textarea {
     content: "\f073"; }
   #mainmenu .menu-forum a:before {
     content: "\f086"; }
+  #mainmenu .menu-galleries a:before {
+    content: "\f083"; }
   #mainmenu .language {
     border-top: 1px solid rgba(85, 85, 85, 0.5);
     margin: 7.5px;
@@ -393,18 +399,22 @@ textarea {
     -ms-flex: 0 0 70px;
     flex: 0 0 70px;
     border-right: 1px solid #555555; }
+    #mainmenu ul {
+      text-align: center; }
     #mainmenu .wrapper {
       position: fixed;
       top: 0;
       left: 0;
       padding-top: 15px;
-      width: 70px; }
-    #mainmenu ul {
-      text-align: center; } }
+      width: 70px; } }
 
 #submenu {
   background: #222222;
-  padding: 15px; }
+  padding: 15px;
+  /*  section {
+    border-top: 1px solid $secondary-border-color;
+    margin: 5px 0;
+  }*/ }
   #submenu .brand {
     border-bottom: 1px solid #555555;
     color: #ffffff;
@@ -413,9 +423,6 @@ textarea {
     line-height: 1em; }
     #submenu .brand small {
       color: #999999; }
-  #submenu section {
-    border-top: 1px solid rgba(85, 85, 85, 0.5);
-    margin: 5px 0; }
   #submenu a {
     color: #999999; }
     #submenu a:hover {
@@ -425,6 +432,17 @@ textarea {
   #submenu ol {
     list-style: none;
     padding: 0; }
+  #submenu ul li {
+    font-weight: 700; }
+    #submenu ul li a {
+      color: #999999;
+      display: block;
+      text-decoration: none; }
+      #submenu ul li a .fa {
+        float: right; }
+    #submenu ul li a:hover,
+    #submenu ul li.active a {
+      color: #ffffff; }
 
 @media only screen and (min-width: 768px) {
   #submenu {
@@ -579,3 +597,62 @@ section.event {
       width: 100%; }
     section.event header button {
       text-transform: uppercase; }
+
+.forum-post {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.forum-post__author {
+  width: 200px; }
+
+.forum-post__content {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.flyers.grid .grid__item {
+  height: 0;
+  width: 25%;
+  padding-top: 25%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase; }
+  .flyers.grid .grid__item a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: background-position 0.25s ease-in-out;
+    -moz-transition: background-position 0.25s ease-in-out;
+    transition: background-position 0.25s ease-in-out;
+    background-position: 50% 33%;
+    background-size: cover;
+    display: block; }
+    .flyers.grid .grid__item a:hover {
+      background-position: 75% 66%; }
+    .flyers.grid .grid__item a h2 {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      -webkit-transition: top 0.25s ease-in-out;
+      -moz-transition: top 0.25s ease-in-out;
+      transition: top 0.25s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+      height: 50%;
+      margin: 0;
+      padding: 0.75em; }
+    .flyers.grid .grid__item a:hover h2 {
+      top: 50%; }

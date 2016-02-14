@@ -1,0 +1,41 @@
+.flyers.grid {
+
+  .grid__item {
+    @include size(25% 0);
+
+    padding-top: 25%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      @include position(absolute, 0 0);
+      @include size(100%);
+      @include transition(background-position 0.25s ease-in-out);
+
+      background-position: 50% 33%;
+      background-size: cover;
+      display: block;
+
+      &:hover {
+        background-position: 75% 66%;
+      }
+
+      h2 {
+        @include position(absolute, 100% 0 null 0);
+        @include transition(top 0.25s ease-in-out);
+
+        background: transparentize($body-color, 0.5);
+        height: 50%;
+        margin: 0;
+        padding: $base-spacing / 2;
+      }
+
+      &:hover h2 {
+        top: 50%;
+      }
+    }
+
+  }
+
+}
