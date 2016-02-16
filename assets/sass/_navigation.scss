@@ -3,15 +3,45 @@
 
 nav {
 
+  ol,
   ul {
+    list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  ul li {
+  li {
     display: inline;
   }
 
+  a {
+    color: $base-font-color;
+
+    small {
+      color: transparentize($base-font-color, 0.6);
+    }
+  }
+
+  li.active a {
+    color: $base-link-color;
+  }
+
+  &.horizontal {
+    font-weight: $font-weight-bold;
+
+    ol,
+    ul {
+      padding: $base-spacing / 2 0;
+    }
+
+    li {
+      padding: 0 $base-spacing / 2;
+    }
+
+    li + li {
+      border-left: 1px solid $secondary-border-color;
+    }
+  }
 }
 
 

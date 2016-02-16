@@ -1,11 +1,16 @@
 title = "Flyers"
-url = "/flyers"
+url = "/flyers/:year?|^[0-9]+$/:month?|^[01]?[0-9]$"
 layout = "default"
 description = "Flyer galleries."
 is_hidden = 0
 
 [galleryFlyers]
 listType = "new_flyers"
+month = "{{ :month }}"
+year = "{{ :year }}"
+
+[galleryFlyerPerMonth]
+flyersPage = "galleries/flyers"
 month = "{{ :month }}"
 year = "{{ :year }}"
 ==
@@ -20,8 +25,14 @@ function onInit() {
 {% endput %}
 
 
+{% component 'galleryFlyerPerMonth' %}
+
 <h1>
-    {{ 'Latest flyers'|_ }}
+    {% if year %}
+        {{ month ? (year ~ '-' ~ month)|strftime('%B %Y') : year }}
+    {% else %}
+        {{ 'Latest flyers'|_ }}
+    {% endif %}
 </h1>
 
 {% component 'galleryFlyers' %}

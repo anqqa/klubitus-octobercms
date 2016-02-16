@@ -132,12 +132,32 @@ hr {
     left: 0.5em;
     margin-right: -50%; }
 
+nav ol,
 nav ul {
+  list-style: none;
   margin: 0;
   padding: 0; }
 
-nav ul li {
+nav li {
   display: inline; }
+
+nav a {
+  color: #999999; }
+  nav a small {
+    color: rgba(153, 153, 153, 0.4); }
+
+nav li.active a {
+  color: #ffffff; }
+
+nav.horizontal {
+  font-weight: 700; }
+  nav.horizontal ol,
+  nav.horizontal ul {
+    padding: 0.75em 0; }
+  nav.horizontal li {
+    padding: 0 0.75em; }
+  nav.horizontal li + li {
+    border-left: 1px solid rgba(85, 85, 85, 0.5); }
 
 .pagination {
   text-align: center; }
@@ -619,6 +639,9 @@ section.event {
   -ms-flex: 1;
   flex: 1; }
 
+.monthmenu hr {
+  margin: 0; }
+
 .flyers.grid .grid__item {
   height: 0;
   width: 25%;
@@ -643,6 +666,8 @@ section.event {
     .flyers.grid .grid__item a:hover {
       background-position: 75% 66%; }
     .flyers.grid .grid__item a h2 {
+      margin: 0;
+      padding: 0.75em;
       position: absolute;
       top: 100%;
       right: 0;
@@ -651,8 +676,6 @@ section.event {
       -moz-transition: top 0.25s ease-in-out;
       transition: top 0.25s ease-in-out;
       background: rgba(0, 0, 0, 0.5);
-      height: 50%;
-      margin: 0;
-      padding: 0.75em; }
+      height: 50%; }
     .flyers.grid .grid__item a:hover h2 {
       top: 50%; }

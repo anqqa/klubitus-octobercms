@@ -1,3 +1,9 @@
+.monthmenu {
+  hr {
+    margin: 0;
+  }
+}
+
 .flyers.grid {
 
   .grid__item {
@@ -22,17 +28,29 @@
       }
 
       h2 {
-        @include position(absolute, 100% 0 null 0);
-        @include transition(top 0.25s ease-in-out);
-
-        background: transparentize($body-color, 0.5);
-        height: 50%;
         margin: 0;
         padding: $base-spacing / 2;
+
+        // v1
+        @include position(absolute, 100% 0 null 0);
+        @include transition(top 0.25s ease-in-out);
+        background: transparentize($body-color, 0.5);
+        height: 50%;
+
+        // v2
+        //@include position(absolute, 0 0 0 0);
+        //background-color: rgba(255, 255, 255, 0.75);
+        //color: black;
+        //display: none;
       }
 
       &:hover h2 {
+
+        // v1
         top: 50%;
+
+        // v2
+        //display: block;
       }
     }
 
