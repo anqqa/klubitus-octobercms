@@ -32,6 +32,7 @@ $body-color:             #000000 !default;
 $base-border-color:      #555555 !default;
 $secondary-border-color: transparentize($base-border-color, 0.5);
 $base-font-color:        #999999 !default;
+$secondary-font-color:   transparentize($base-font-color, 0.6);
 $base-link-color:        #ffffff !default;
 $error-color:            #fbe3e4 !default;
 $info-color:             #e5edf8 !default;

@@ -39,6 +39,8 @@ h1 {
   font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 0.3em; }
+  h1 small {
+    color: rgba(153, 153, 153, 0.4); }
 
 article h1 {
   font-size: 1.3em; }
@@ -476,11 +478,29 @@ textarea {
     border-right: 1px solid #555555; } }
 
 #topbar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   border-bottom: 1px solid #555555; }
+  #topbar .search {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  #topbar .session {
+    margin-left: 1.5em; }
 
 @media only screen and (min-width: 768px) {
   #topbar {
-    height: 35px; } }
+    height: 35px;
+    line-height: 35px; } }
 
 #content {
   display: -webkit-box;

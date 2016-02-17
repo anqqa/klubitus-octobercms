@@ -2,7 +2,17 @@
 // ------------------------------------
 
 #topbar {
+  @include display(flex);
+
   border-bottom: 1px solid $base-border-color;
+
+  .search {
+    @include flex(1);
+  }
+
+  .session {
+    margin-left: $base-spacing;
+  }
 }
 
 
@@ -21,6 +31,7 @@
 
   #topbar {
     height: $topbar - $padding;
+    line-height: $topbar - $padding;
   }
 
 }

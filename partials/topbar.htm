@@ -1,9 +1,13 @@
 <div id="topbar">
-    {% if user %}
-        <a href="{{ 'logout'|page }}">{{ 'Logout'|_ }}</a>
-    {% else %}
-        <a href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
-        {{ 'or'|_ }}
-        <a href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
-    {% endif %}
+    {% placeholder topbar %}
+
+    <div class="session">
+        {% if user %}
+            <a href="{{ 'logout'|page }}">{{ 'Logout'|_ }}</a>
+        {% else %}
+            <a href="{{ 'login'|page }}">{{ 'Login'|_ }}</a>
+            {{ 'or'|_ }}
+            <a href="{{ 'register'|page }}">{{ 'Register'|_ }}</a>
+        {% endif %}
+    </div>
 </div><!-- #topbar -->

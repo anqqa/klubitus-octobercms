@@ -24,14 +24,24 @@ function onInit() {
     {% partial 'galleries/submenu' activeMenuItem='flyers' %}
 {% endput %}
 
+{% put topbar %}
+    {% partial 'galleries/search' search='flyers' %}
+{% endput %}
+
 
 {% component 'galleryFlyerPerMonth' %}
 
 <h1>
+    {{ input('search') ? "'" ~ input('search') ~ "' - " }}
+
     {% if year %}
         {{ month ? (year ~ '-' ~ month)|strftime('%B %Y') : year }}
     {% else %}
         {{ 'Latest flyers'|_ }}
+    {% endif %}
+
+    {% if flyers.total %}
+        <small>({{ flyers.total|number_format }})</small>
     {% endif %}
 </h1>
 
