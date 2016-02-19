@@ -74,6 +74,10 @@ hr {
   margin: $base-spacing;
 }
 
+img.image {
+  max-width: 100%;
+}
+
 .date {
   color: transparentize($base-font-color, 0.6);
   font-style: italic;

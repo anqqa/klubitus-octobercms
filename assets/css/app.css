@@ -65,6 +65,9 @@ hr {
   border-width: 1px 0 0 0;
   margin: 1.5em; }
 
+img.image {
+  max-width: 100%; }
+
 .date {
   color: rgba(153, 153, 153, 0.4);
   font-style: italic; }
@@ -593,6 +596,9 @@ main {
     -o-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
+  main nav.actions {
+    text-align: center;
+    text-transform: uppercase; }
 
 #sidebar {
   padding: 15px; }
@@ -699,3 +705,6 @@ section.event {
       height: 50%; }
     .flyers.grid .grid__item a:hover h2 {
       top: 50%; }
+
+.flyer nav {
+  text-align: center; }

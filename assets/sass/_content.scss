@@ -33,6 +33,11 @@ main {
     @include flex(1);
     @include justify-content(center);
   }
+
+  nav.actions {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 

@@ -1,0 +1,31 @@
+title = "Flyer"
+url = "/flyer/:flyer_id|^[0-9]+"
+layout = "default"
+description = "Single flyer view."
+is_hidden = 0
+
+[galleryFlyer]
+id = "{{ :flyer_id }}"
+==
+<?php
+function onInit() {
+    $this['activeMenuItem'] = 'galleries';
+}
+?>
+==
+{% put submenu %}
+    {% partial 'galleries/submenu' activeMenuItem='flyers' %}
+{% endput %}
+
+{% put topbar %}
+    {% partial 'galleries/search' search='flyers' %}
+{% endput %}
+
+<h1>
+    {{ flyer.event ? flyer.event.name : flyer.name }}
+    <small>
+        ({{ (flyer.event ? flyer.event.begins_at : flyer.begins_at)|strftime('%d %B %Y') }})
+    </small>
+</h1>
+
+{% component 'galleryFlyer' %}
