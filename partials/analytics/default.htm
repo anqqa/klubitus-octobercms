@@ -1,0 +1,8 @@
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '{{ __SELF__.trackingId }}', '{{ __SELF__.domainName }}');
+ga('require', 'autotrack');
+ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+<script async src="{{ 'assets/js/autotrack.js'|theme }}"></script>
