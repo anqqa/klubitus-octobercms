@@ -1,0 +1,17 @@
+div.comments {
+  margin-top: $base-spacing;
+}
+
+.comment {
+  .media__image {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.comment + .comment {
+  margin-top: $base-spacing;
+}

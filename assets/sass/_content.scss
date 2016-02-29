@@ -21,9 +21,11 @@ main {
 
   & > section {
     margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
 
     &.full {
-      width: 100%;
+      max-width: none;
     }
   }
 
@@ -38,6 +40,7 @@ main {
     text-align: center;
     text-transform: uppercase;
   }
+
 }
 
 

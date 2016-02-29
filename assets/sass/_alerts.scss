@@ -17,9 +17,10 @@
 
 
 #alerts {
-  margin: $base-spacing 0;
-  padding: 0 $base-spacing 0 0;
-  position: fixed;
+  @include position(fixed, $topbar null null 0);
+
+  margin: $base-spacing 0 0;
+  padding: 0;
   width: 100%;
 
   &:empty { display: none; }

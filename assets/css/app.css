@@ -65,9 +65,6 @@ hr {
   border-width: 1px 0 0 0;
   margin: 1.5em; }
 
-img.image {
-  max-width: 100%; }
-
 .date {
   color: rgba(153, 153, 153, 0.4);
   font-style: italic; }
@@ -227,6 +224,10 @@ textarea {
   textarea:-ms-input-placeholder {
     color: rgba(153, 153, 153, 0.5);
     font-style: italic; }
+  input:active, input:focus,
+  textarea:active,
+  textarea:focus {
+    background-color: #2b2b2b; }
   input:hover::-webkit-input-placeholder,
   textarea:hover::-webkit-input-placeholder {
     color: rgba(153, 153, 153, 0.75); }
@@ -251,6 +252,13 @@ textarea {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   flex-flow: row wrap;
@@ -281,6 +289,23 @@ textarea {
     border-bottom: 2px solid #97161b; }
   .input.input--error .input__message {
     color: #97161b; }
+
+.form--horizontal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .form--horizontal .input {
+    margin-bottom: 0; }
+
+img.image {
+  max-width: 100%; }
+
+.avatar img {
+  border-radius: 50%; }
 
 .table {
   border-collapse: separate;
@@ -315,9 +340,11 @@ textarea {
     margin: 0; }
 
 #alerts {
-  margin: 1.5em 0;
-  padding: 0 1.5em 0 0;
   position: fixed;
+  top: 50px;
+  left: 0;
+  margin: 1.5em 0 0;
+  padding: 0;
   width: 100%; }
   #alerts:empty {
     display: none; }
@@ -560,9 +587,11 @@ main {
   main h1 {
     margin-bottom: 0.9em; }
   main > section {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 720px;
+    width: 100%; }
     main > section.full {
-      width: 100%; }
+      max-width: none; }
   main .center {
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -607,6 +636,18 @@ main {
 #password,
 #register {
   width: 280px; }
+
+div.comments {
+  margin-top: 1.5em; }
+
+.comment .media__image {
+  margin-top: 0; }
+
+.comment p {
+  margin-bottom: 0; }
+
+.comment + .comment {
+  margin-top: 1.5em; }
 
 section.events .event {
   border-top: 1px solid rgba(85, 85, 85, 0.5);

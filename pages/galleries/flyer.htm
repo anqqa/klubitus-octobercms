@@ -6,6 +6,10 @@ is_hidden = 0
 
 [galleryFlyer]
 id = "{{ :flyer_id }}"
+
+[comments]
+commentableClass = "Klubitus\Calendar\Models\Flyer"
+pageCommentable = "flyer"
 ==
 <?php
 function onInit() {
@@ -29,3 +33,5 @@ function onInit() {
 </h1>
 
 {% component 'galleryFlyer' %}
+
+{% component 'comments' %}
