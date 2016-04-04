@@ -8,12 +8,24 @@ is_hidden = 0
 id = "{{ :area_id }}"
 topicPage = "forum/topic"
 ==
+<?php
+function onInit() {
+    $this['activeMenuItem'] = 'forum';
+}
+?>
+==
 {% put submenu %}
     {% partial 'forum/submenu' %}
 {% endput %}
 
+{% put topbar %}
+    {% partial 'search' placeholder='Search topics and posts in this area' %}
+{% endput %}
+
 
 <h1>
+    {{ input('search') ? "'" ~ input('search') ~ "' - " }}
+
     {{ title }}
 </h1>
 

@@ -28,7 +28,13 @@ function onInit() {
 <h1>
     {{ flyer.event ? flyer.event.name : flyer.name }}
     <small>
-        ({{ (flyer.event ? flyer.event.begins_at : flyer.begins_at)|strftime('%d %B %Y') }})
+        {% if flyer.event %}
+            ({{ (flyer.event.begins_at)|strftime('%d %B %Y') }})
+        {% elseif flyer.begins_at %}
+            ({{ flyer.begins_at|strftime('%d %B %Y') }})
+        {% else %}
+            ({{ 'Unknown date'|_ }})
+        {% endif %}
     </small>
 </h1>
 

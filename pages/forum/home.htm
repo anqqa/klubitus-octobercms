@@ -12,8 +12,15 @@ topicPage = "forum/topic"
     {% partial 'forum/submenu' %}
 {% endput %}
 
+{% put topbar %}
+    {% partial 'search' placeholder='Search topics and posts' %}
+{% endput %}
+
 
 <h1>
+    {{ input('search') ? "'" ~ input('search') ~ "' - " }}
+
     {{ title }}
 </h1>
+
 {% component 'forumAreas' %}

@@ -38,6 +38,7 @@ textarea {
   @include flex-flow(row wrap);
 
   margin-bottom: $base-spacing;
+  position: relative;
 
   .input__addon {
     color: transparentize($base-font-color, 0.5);
@@ -57,6 +58,13 @@ textarea {
 
   .input__field {
     @include flex(1);
+
+    & + button.input__addon {
+      background: lighten($input-background-color, 5%);
+      border: 0;
+      padding: ($base-spacing / 3) ($base-spacing / 2);
+      position: inherit;
+    }
   }
 
   .input__message {

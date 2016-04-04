@@ -262,7 +262,8 @@ textarea {
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   flex-flow: row wrap;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  position: relative; }
   .input .input__addon {
     color: rgba(153, 153, 153, 0.5);
     line-height: 1.5em;
@@ -281,6 +282,11 @@ textarea {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1; }
+    .input .input__field + button.input__addon {
+      background: #2b2b2b;
+      border: 0;
+      padding: 0.5em 0.75em;
+      position: inherit; }
   .input .input__message {
     color: rgba(153, 153, 153, 0.5);
     flex: 1 100%;

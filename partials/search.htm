@@ -1,0 +1,10 @@
+<div class="search">
+    {{ form_open({ method: 'get'}) }}
+    <div class="input">
+        <input type="text" name="search" placeholder="{{ (placeholder ?: 'Search')|_ }}" class="input__field" value="{{ input('search')|e }}">
+        <button class="button input__addon">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    {{ form_close() }}
+</div>
