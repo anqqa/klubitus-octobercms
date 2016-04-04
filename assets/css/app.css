@@ -490,6 +490,8 @@ img.image {
   #submenu ol {
     list-style: none;
     padding: 0; }
+  #submenu li {
+    display: inherit; }
   #submenu ul li {
     font-weight: 700; }
     #submenu ul li a {
