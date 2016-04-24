@@ -7,20 +7,26 @@ is_hidden = 0
 [forumAreas]
 areaPage = "forum/area"
 topicPage = "forum/topic"
+
+[forumSearch]
+areaPage = "forum/area"
+topicPage = "forum/topic"
 ==
 {% put submenu %}
     {% partial 'forum/submenu' %}
 {% endput %}
 
 {% put topbar %}
-    {% partial 'search' placeholder='Search topics and posts' %}
+    {% partial 'search' placeholder='Search topics, to search posts select an area first' %}
 {% endput %}
 
 
 <h1>
-    {{ input('search') ? "'" ~ input('search') ~ "' - " }}
-
-    {{ title }}
+    {{ input('search') ? "'" ~ input('search') ~ "'" }}
 </h1>
 
-{% component 'forumAreas' %}
+{% if input('search') %}
+    {% component 'forumSearch' %}
+{% else %}
+    {% component 'forumAreas' %}
+{% endif %}
